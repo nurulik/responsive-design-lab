@@ -1,0 +1,86 @@
+/* main.css */
+
+.container {
+  background: #eee;
+  overflow: auto;
+}
+
+.container .col {
+    width: 27%;
+    padding: 30px 3.15% 0;
+    float: left;
+}
+/*jika tampilan device 100% maka tampilkan akan terbagi menjadi 3 kolom*/
+
+/* TODO 3 - style the page */
+
+@media	screen	and	(max-width:	48rem)	{
+		.container	.col	{
+				width:	95%;
+		}
+}
+/*jika lebar kurang dari 48em atau 768px maka tampilan tidak dalam bentuk kolom melainkan vertikal*/
+
+.container	{
+		display:	-webkit-box;		/*	OLD	-	iOS	6-,	Safari	3.1-6	*/
+		display:	-ms-flexbox;		/*	TWEENER	-	IE	10	*/
+		display:	flex;									/*	NEW,	Spec	-	Firefox,	Chrome,	Opera	*/
+		background:	#eee;		
+		overflow:	auto;
+}
+.container	.col	{
+		flex:	1;
+		padding:	1rem;
+}
+/*tampilan akan ditampilkan secara horizontal atau berkolom-kolom*/
+
+@media screen and (max-width: 48rem) {
+.container {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+flex-flow: column;
+}
+}
+/*jika lebar kurang dari 48em atau 768px maka tampilan tidak dalam bentuk kolom melainkan vertikal*/
+
+.no-flexbox .container {
+background: #eee;
+overflow: auto;
+}
+/*konten yang berlebih akan otomatis turun ke bawah sehingga tidak ada vertikal scroll bar*/
+.no-flexbox .container .col {
+width: 27%;
+padding: 30px 3.15% 0;
+float: left;
+}
+/*jika tampilan device 100% maka tampilkan akan terbagi menjadi 3 kolom*/
+@media screen and (max-width: 48rem) {
+.no-flexbox .container .col {
+width: 95%;
+}
+}
+/*jika lebar kurang dari 48em atau 768px maka tampilan tidak dalam bentuk kolom melainkan vertikal*/
+
+.flexbox .container {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+background: #eee;
+overflow: auto;
+}
+/*tampilan akan ditampilkan secara horizontal atau berkolom-kolom
+konten yang berlebih akan otomatis turun ke bawah sehingga tidak ada vertikal scroll bar*/
+.flexbox .container .col {
+flex: 1;
+padding: 1rem;
+}
+/*batas antar konten sebesar 1rem atau 16px*/
+@media screen and (max-width: 48rem) {
+.flexbox .container {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+flex-flow: column;
+}
+/*jika lebar kurang dari 48em atau 768px maka tampilan tidak dalam bentuk kolom melainkan vertikal*/
